@@ -30,6 +30,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v2
       env:
         ACCESS_TOKEN: ${{ secrets.Automate }}
-        BASE_BRANCH: master
+        BASE_BRANCH: main
         BRANCH: gh-pages
         FOLDER: dist
