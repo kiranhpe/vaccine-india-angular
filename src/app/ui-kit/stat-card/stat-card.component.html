@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-header>
+      <div mat-card-avatar>
+        <mat-icon>{{card.iconClass}}</mat-icon>
+      </div>
+      <mat-card-title>{{card.title}}</mat-card-title>
+      <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+     <ng-content></ng-content>
+    </mat-card-content>
+  </mat-card>

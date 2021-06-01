@@ -7,14 +7,24 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { TopNavComponent } from './components/top-nav/top-nav.component';
+import { HomeComponent } from './components/home/home.component';
+import { MaterialModule } from './components/material.module';
+import { StatCardComponent } from './ui-kit/stat-card/stat-card.component';
+import { TopCardsComponent } from './components/top-cards/top-cards.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopNavComponent,
+    HomeComponent,
+    StatCardComponent,
+    TopCardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
     StoreModule.forRoot(reducers, {
       metaReducers
     }),
