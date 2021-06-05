@@ -1,12 +1,26 @@
 <mat-card>
-    <mat-card-header>
-      <div mat-card-avatar>
-        <mat-icon>{{card.iconClass}}</mat-icon>
+  <mat-card-header>
+    <div mat-card-avatar>
+      <mat-icon>{{card.iconClass}}</mat-icon>
+    </div>
+    <mat-card-title>{{card.title}}</mat-card-title>
+    <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
+    <mat-card-subtitle>Total : {{card.total}}</mat-card-subtitle>
+    <div fxFlex></div>
+    <div class="delta-container">
+      <p>Today : <span class="delta">{{card.delta}}</span></p>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="catagories">
+      <div>
+        <p>{{card.catagories[0].name}}</p>
+        <p>{{card.catagories[0].value}}</p>
       </div>
-      <mat-card-title>{{card.title}}</mat-card-title>
-      <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-     <ng-content></ng-content>
-    </mat-card-content>
-  </mat-card>
+      <div>
+        <p>{{card.catagories[1].name}}</p>
+        <p>{{card.catagories[1].value}}</p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
