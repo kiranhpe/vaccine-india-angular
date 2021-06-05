@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MaterialModule } from './components/material.module';
 import { StatCardComponent } from './ui-kit/stat-card/stat-card.component';
 import { TopCardsComponent } from './components/top-cards/top-cards.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TopCardsComponent } from './components/top-cards/top-cards.component';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    HttpClientModule,
     StoreModule.forRoot(reducers, {
       metaReducers
     }),

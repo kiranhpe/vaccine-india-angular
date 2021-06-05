@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 import { Card } from '../common/interfaces/card.interface';
 import { StatsCard } from '../common/stats-card.interface';
 
@@ -40,7 +41,11 @@ export class TopCardsComponent implements OnInit {
       delta:10
     },
   ];
-  constructor() {}
+  constructor(private _api: ApiService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._api.getDashBoardData().subscribe(data => {
+      console.log(data)
+    })
+  }
 }
