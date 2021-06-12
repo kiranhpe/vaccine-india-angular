@@ -82,8 +82,8 @@ export class TopCardsComponent implements OnInit {
               { name: 'Dose 1', value: topBlockData.vaccination['tot_dose_1']},
               { name: 'Dose 2', value: topBlockData.vaccination['tot_dose_2'] },
             ],
-            total: topBlockData.vaccination['today'],
-            delta: topBlockData.vaccination['total'],
+            total: topBlockData.vaccination['total_doses'],
+            delta: topBlockData.vaccination['today'],
           },
         ];
       }
