@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { ApiService } from 'src/app/services/api.service';
-import { Card } from '../common/interfaces/card.interface';
 import { Dashboard } from '../common/interfaces/dashboard';
 import { StatsCard } from '../common/stats-card.interface';
 
@@ -12,38 +10,7 @@ import { StatsCard } from '../common/stats-card.interface';
   styleUrls: ['./top-cards.component.scss'],
 })
 export class TopCardsComponent implements OnInit {
-  cards: StatsCard[] = [
-    {
-      iconClass: 'business',
-      title: 'Sites Conducting Vaccination',
-      catagories: [
-        { name: 'Govt', value: 0 },
-        { name: 'Pvt', value: 0 },
-      ],
-      total: 0,
-      delta: 10,
-    },
-    {
-      iconClass: 'group',
-      title: 'Total Registrations',
-      catagories: [
-        { name: 'Govt', value: 0 },
-        { name: 'Pvt', value: 0 },
-      ],
-      total: 0,
-      delta: 10,
-    },
-    {
-      iconClass: 'medication',
-      title: 'Total Vaccination Doses',
-      catagories: [
-        { name: 'Govt', value: 0 },
-        { name: 'Pvt', value: 0 },
-      ],
-      total: 0,
-      delta: 10,
-    },
-  ];
+  cards: StatsCard[] = [];
 
   data: Observable<Dashboard>;
   constructor(private store: Store<{ dashboardData: Dashboard }>) {
