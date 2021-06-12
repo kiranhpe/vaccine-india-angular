@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,12 @@ import { HomeComponent } from './components/home/home.component';
 import { MaterialModule } from './components/material.module';
 import { StatCardComponent } from './ui-kit/stat-card/stat-card.component';
 import { TopCardsComponent } from './components/top-cards/top-cards.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
+import { DashboardEffects } from './store/efffects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { LoadingInterceptor } from './interceptors/loader.interceptor';
+import { NgxSpinnerComponent, NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
+    EffectsModule.forRoot([DashboardEffects]),
     StoreModule.forRoot({dashboardData: dashboardReducer}),
+    StoreDevtoolsModule.instrument({}),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
@@ -35,7 +45,11 @@ import { HttpClientModule } from '@angular/common/http';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [],
+  providers: [ {
+    provide: HTTP_INTERCEPTORS,
+    useClass: LoadingInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
