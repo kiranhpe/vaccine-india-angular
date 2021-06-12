@@ -22,4 +22,11 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should contains the top cards',()=>{
+    const topsCards: HTMLElement = fixture.nativeElement;
+    const cards = topsCards.querySelector('app-top-cards');
+
+    expect(cards).not.toBeUndefined();
+   // expect(cards?[0].className).toBe('top-cards')
+  })
 });

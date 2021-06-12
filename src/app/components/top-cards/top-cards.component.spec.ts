@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TopCardsComponent } from './top-cards.component';
@@ -8,7 +9,8 @@ describe('TopCardsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TopCardsComponent ]
+      declarations: [ TopCardsComponent ],
+      imports:[HttpClientModule]
     })
     .compileComponents();
   });

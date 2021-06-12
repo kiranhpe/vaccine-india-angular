@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 import { StatCardComponent } from './stat-card.component';
 
@@ -8,7 +10,8 @@ describe('StatCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatCardComponent ]
+      declarations: [ StatCardComponent ],
+      imports:[MatCardModule,MatIconModule]
     })
     .compileComponents();
   });

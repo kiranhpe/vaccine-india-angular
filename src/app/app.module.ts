@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
+import { dashboardReducer } from './store/reducers';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
@@ -27,9 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers
-    }),
+    StoreModule.forRoot({dashboardData: dashboardReducer}),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
