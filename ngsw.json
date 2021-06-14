@@ -1,0 +1,81 @@
+{
+  "configVersion": 1,
+  "timestamp": 1623675998196,
+  "index": "/vaccine-india-angular/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/vaccine-india-angular/favicon.ico",
+        "/vaccine-india-angular/index.html",
+        "/vaccine-india-angular/main.5efdf257b0cb7caf3956.js",
+        "/vaccine-india-angular/manifest.webmanifest",
+        "/vaccine-india-angular/polyfills.665d43d9ea05c55509ce.js",
+        "/vaccine-india-angular/runtime.2b504c9f8e0f1a88cc7b.js",
+        "/vaccine-india-angular/styles.0b7ad9169a7c0edaca53.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/vaccine-india-angular/assets/icons/icon-128x128.png",
+        "/vaccine-india-angular/assets/icons/icon-144x144.png",
+        "/vaccine-india-angular/assets/icons/icon-152x152.png",
+        "/vaccine-india-angular/assets/icons/icon-192x192.png",
+        "/vaccine-india-angular/assets/icons/icon-384x384.png",
+        "/vaccine-india-angular/assets/icons/icon-512x512.png",
+        "/vaccine-india-angular/assets/icons/icon-72x72.png",
+        "/vaccine-india-angular/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/vaccine-india-angular/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/vaccine-india-angular/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/vaccine-india-angular/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/vaccine-india-angular/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/vaccine-india-angular/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/vaccine-india-angular/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/vaccine-india-angular/assets/icons/icon-72x72.png": "1867297276232211db73d97b00220e89cc835c07",
+    "/vaccine-india-angular/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/vaccine-india-angular/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/vaccine-india-angular/index.html": "84aa2ba552e0b8bc7cbfd7f097ae3a3cc0b92d6e",
+    "/vaccine-india-angular/main.5efdf257b0cb7caf3956.js": "374a723d49318972f3e53ae352eea4035cd4dd2c",
+    "/vaccine-india-angular/manifest.webmanifest": "3acbf2e1ca52647d7c80b41d6badbe4dd51d2216",
+    "/vaccine-india-angular/polyfills.665d43d9ea05c55509ce.js": "44ee881fbafc0ab6aa5151afdc4445d95f344c83",
+    "/vaccine-india-angular/runtime.2b504c9f8e0f1a88cc7b.js": "d6dbc4e5352b7680e727fe64af3542bd69650baa",
+    "/vaccine-india-angular/styles.0b7ad9169a7c0edaca53.css": "fe36755319b0e28a3a5ed6b8e64cf684fd78bafa"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
