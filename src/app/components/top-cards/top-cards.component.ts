@@ -44,7 +44,7 @@ export class TopCardsComponent implements OnInit {
           },
           {
             iconClass: 'medication',
-            title: 'Total Vaccination Doses',
+            title: 'Total Vaccination',
             catagories: [
               { name: 'Dose 1', value: topBlockData.vaccination['tot_dose_1']},
               { name: 'Dose 2', value: topBlockData.vaccination['tot_dose_2'] },
