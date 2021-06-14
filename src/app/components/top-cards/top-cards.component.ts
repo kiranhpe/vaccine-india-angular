@@ -21,7 +21,7 @@ export class TopCardsComponent implements OnInit {
         this.cards = [
           {
             iconClass: 'business',
-            title: 'Sites Conducting Vaccination',
+            title: 'Vaccination Sites',
             catagories: [
               { name: 'Govt', value: topBlockData.sites.govt },
               { name: 'Pvt', value: topBlockData.sites.pvt },
